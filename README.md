@@ -1,3 +1,50 @@
+## ASP.NET Core Controller-Methoden-Attribute
+
+1. **[HttpGet]**  
+   Dieses Attribut wird verwendet, um eine Methode in einem Controller für HTTP GET-Anfragen zuzuordnen. Hier ist ein Beispiel:
+
+   ```csharp
+   [HttpGet]
+   public IActionResult GetItem(int id)
+   {
+       // Code, um ein Element abzurufen
+       return Ok(result);
+   }
+    ```
+   **[HttpPost]**  
+Dieses Attribut wird verwendet, um eine Methode in einem Controller für HTTP POST-Anfragen zuzuordnen. Hier ist ein Beispiel:
+
+```csharp
+[HttpPost]
+public IActionResult CreateItem([FromBody] Item item)
+{
+    // Code, um ein neues Element zu erstellen
+    return CreatedAtRoute("GetItem", new { id = item.Id }, item);
+}
+```
+### [HttpPut]
+Dieses Attribut wird verwendet, um eine Methode in einem Controller für HTTP PUT-Anfragen zuzuordnen. Hier ist ein Beispiel:
+
+```csharp
+[HttpPut("{id}")]
+public IActionResult UpdateItem(int id, [FromBody] Item updatedItem)
+{
+    // Code, um ein vorhandenes Element zu aktualisieren
+    return Ok(updatedItem);
+}
+```
+### [HttpDelete]
+Dieses Attribut wird verwendet, um eine Methode in einem Controller für HTTP DELETE-Anfragen zuzuordnen. Hier ist ein Beispiel:
+
+```csharp
+[HttpDelete("{id}")]
+public IActionResult DeleteItem(int id)
+{
+    // Code, um ein Element zu löschen
+    return NoContent();
+}
+```
+
 ## Parameterbinding in .NET Web-APIs
 
 In .NET Web-APIs werden Daten oft aus verschiedenen Teilen einer HTTP-Anfrage abgerufen, um Aktionen in Controllern auszuführen. Das System, das diese Zuordnung verwaltet, wird als "Parameterbinding" bezeichnet. Es erlaubt, dass Daten aus verschiedenen Teilen einer Anfrage (z.B. URL, Abfragezeichenfolge, Header, Body) an die Parameter von Controller-Methoden gebunden werden.
