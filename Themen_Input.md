@@ -186,6 +186,8 @@ public class TransientService : ITransientService
 // In der Startup-Klasse oder im ConfigureServices-Methode:
 services.AddTransient<ITransientService, TransientService>();
 ```
+Das Guid steht für Globally Unique Identifier
+
 ## 2. AddScoped
 Ein AddScoped-Service erstellt eine Instanz für jeden einzelnen HTTP-Anforderungszyklus. Das bedeutet, dass alle Controller und Aktionen, die während einer einzelnen HTTP-Anforderung erstellt werden, dieselbe Instanz eines scoped Dienstes verwenden.
 
