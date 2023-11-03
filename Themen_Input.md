@@ -139,7 +139,7 @@ public IHttpActionResult CreateProduct([FromBody] Product newProduct)
 ```
 ### [FromUri]
 
-Die `[FromUri]`-Anmerkung gibt an, dass ein Parameterwert aus der URI der HTTP-Anfrage abgerufen werden soll. Dies ist besonders nützlich bei GET-Anfragen, bei denen Daten oft in der URL oder der Abfragezeichenfolge enthalten sind. dDas Uri steht für Unifotm Resource identifier
+Die `[FromUri]`-Anmerkung gibt an, dass ein Parameterwert aus der URI der HTTP-Anfrage abgerufen werden soll. Dies ist besonders nützlich bei GET-Anfragen, bei denen Daten oft in der URL oder der Abfragezeichenfolge enthalten sind. Das Uri steht für Unifotm Resource identifier
 
 
 #### Codebeispiel:
