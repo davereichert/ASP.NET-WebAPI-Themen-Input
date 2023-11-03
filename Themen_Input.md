@@ -27,7 +27,7 @@ Routing ist ein wichtiger Teil jeder Webanwendung. Es bestimmt, welche Seite ang
 
 ### Beispiel
 
-Angenommen, du hast eine Webseite für ein Online-Shop. Wenn ein Kunde die Seite "/produkte" aufruft, würde der Router den "ProdukteController" auswählen und die "index" Action aufrufen. In dieser Action könnte die Logik implementiert sein, um alle verfügbaren Produkte aus der Datenbank abzurufen und anzuzeigen.
+Angenommen, du hast eine Webseite für ein Online-Shop. Wenn ein Kunde die Seite "/produkte" aufruft, würde der Router den "BooksController" auswählen und die "index" Action aufrufen. In dieser Action könnte die Logik implementiert sein, um alle verfügbaren Produkte aus der Datenbank abzurufen und anzuzeigen.
 
 ```csharp
 public class BooksController : ApiController
